@@ -1,18 +1,20 @@
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+import { FeedBackBox, FeedBackList, Feed } from './FeedbackOptions.styled';
+
+export const FeedbackOptions = ({ options, onLeaveFeedback, FeedBackItem }) => {
   return (
-    <>
-      <h1>Please Leave Feadback</h1>
-      <ul>
+    <FeedBackBox>
+      <h2>Please Leave Feadback</h2>
+      <FeedBackList>
         <li>
-          <button type="button">Good</button>
+          <Feed type="button">Good</Feed>
         </li>
         <li>
-          <button type="button">Neutral</button>
+          <Feed type="button">Neutral</Feed>
         </li>
         <li>
-          <button type="button">Bad</button>
+          <Feed type="button">Bad</Feed>
         </li>
-      </ul>
-    </>
+      </FeedBackList>
+    </FeedBackBox>
   );
 };
