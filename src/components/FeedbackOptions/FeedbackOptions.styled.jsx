@@ -15,4 +15,8 @@ export const Feed = styled.button`
   width: 100px;
   height: 40px;
   font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border-width: 0;
 `;
