@@ -30,8 +30,9 @@ export const Feed = styled.button`
         return '#f31515';
       }
     }};
+    transform: scale(1.1);
+    transition: transform 0.4s;
   }
   transition: background-color 0.4s;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 `;
