@@ -1,42 +1,19 @@
-import { FeedBackBox, FeedBackList, Feed } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
+import { FeedBackList, Feed } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = ({
-  OncounterTotalGood,
-  OncounterTotalBad,
-  OncounterTotalNeutral,
-}) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <FeedBackBox>
-      <h2>Please Leave Feadback</h2>
-      <FeedBackList>
-        <li>
-          <Feed
-            style={{ backgroundColor: '#00ff00' }}
-            type="button"
-            onClick={OncounterTotalGood}
-          >
-            Good
-          </Feed>
-        </li>
-        <li>
-          <Feed
-            style={{ backgroundColor: '#fbff0a' }}
-            type="button"
-            onClick={OncounterTotalNeutral}
-          >
-            Neutral
-          </Feed>
-        </li>
-        <li>
-          <Feed
-            style={{ backgroundColor: '#ff0404' }}
-            type="button"
-            onClick={OncounterTotalBad}
-          >
-            Bad
-          </Feed>
-        </li>
-      </FeedBackList>
-    </FeedBackBox>
+    <FeedBackList>
+      {options.map(el => (
+        <Feed key={el} onClick={onLeaveFeedback} type="button">
+          {el}
+        </Feed>
+      ))}
+    </FeedBackList>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };

@@ -1,3 +1,10 @@
-// export const Notifications = ({ message }) => {
-//   return <h4>{message}</h4>;
-// };
+import PropTypes from 'prop-types';
+import { FeedbackText } from '../Statistics/Statistics.styled';
+
+export const Notification = ({ message }) => {
+  return <FeedbackText>{message}</FeedbackText>;
+};
+
+Notification.propTypes = {
+  message: PropTypes.string.isRequired,
+};
