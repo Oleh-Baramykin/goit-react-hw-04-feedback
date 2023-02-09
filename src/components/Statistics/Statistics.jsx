@@ -8,7 +8,7 @@ export const Statistics = ({
 }) => {
   return (
     <>
-      <p key={good}>Good: {good}</p>
+      <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {total}</p>
