@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-// export const FeedBackBox = styled.div`
-//   display: block;
-// `;
-
 export const FeedBackList = styled.div`
   display: flex;
   justify-content: center;
